@@ -80,14 +80,17 @@ if prompt := st.chat_input():
     st.chat_message("assistant").write(msg)
     messages.append(st.session_state.messages[-1]) 
     # START OF GRAPH REPRESENTATION    
+
     matches = ["co2 emission", "energy", "carbon dioxide"]
     if any(x in msg.lower() for x in matches) or any(x in prompt.lower() for x in matches):
         st.image(image="https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2024/03/total-increase-in-energy-related-co2-emissions-1900-2023.png.webp", caption="Total increase in energy-related CO2 emissions, 1900-2023. IEA 2024 [CC BY 4.0].",width=352)
+    
     matches = ["temperature", "climate change", "global surface"]
     if any(x in msg.lower() for x in matches) or any(x in prompt.lower() for x in matches):
         st.image(image="https://climate.nasa.gov/internal_resources/2744/GlobalTemp.jpeg", caption="Global Land-Ocean temperature index (Source:https://climate.nasa.gov/vital-signs/global-temperature/",width=352)
         st.markdown("![Alt Text](https://media1.giphy.com/media/1NZVjc68MgkT4X8BQi/giphy.gif?cid=6c09b952ssl7vqh247xb1an2stwvlpthtz4vjntcei15co9l&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g)")
         st.markdown(":grey[climate change gif by Nasa. https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDRiY3V6ZGg4eWNoNzVtZnV2aDNjbTRrNm1jZHM4eGY3NXZqeXlzNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1NZVjc68MgkT4X8BQi/giphy.webp]")
+    
     matches = ["ha pak nai", "cyberport", "kennedy town waterfall front"]
     if any(x in command.lower() for x in matches):
         st.image(image="https://i.imgur.com/rEEUIAG.png",width=352)
