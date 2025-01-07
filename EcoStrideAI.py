@@ -1,7 +1,7 @@
 import streamlit as st
 from openai import AzureOpenAI
 
-#with st.sidebar:
+# with st.sidebar:
 openai_api_key = "57579d7aaa8348ff9b94760a66a92a6c"
    # "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
     #"[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
